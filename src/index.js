@@ -1,19 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'mobx-react';
+import { Provider } from 'mobx-react'; // MobX 에서 사용하는 Provider
 import './index.css';
 import App from './App';
-import serviceWorker from './serviceWorker';
-import CounterStore from './stores/counter';
+import registerServiceWorker from './registerServiceWorker';
+import RootStore from './stores';
 
-const counter = new CounterStore();
+const root = new RootStore(); // *** 루트 스토어 생성
 
 ReactDOM.render(
-  <Provider counter={counter}>
-    {/*  Provider에 props로 넣어준다.*/}
+  <Provider {...root}>
     <App />
   </Provider>,
   document.getElementById('root')
 );
 
-serviceWorker();
+registerServiceWorker();
