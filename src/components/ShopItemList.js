@@ -6,18 +6,22 @@ const items = [
   {
     name: '생수',
     price: 850,
+    quantity: 0,
   },
   {
     name: '신라면',
     price: 900,
+    quantity: 0,
   },
   {
     name: '포카칩',
     price: 1500,
+    quantity: 0,
   },
   {
     name: '새우깡',
     price: 1000,
+    quantity: 0,
   },
 ];
 
